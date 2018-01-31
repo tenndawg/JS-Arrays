@@ -19,7 +19,7 @@ var arr = [40,50,60];
 
   //Code Here
 function last(arr) {
-	return arr.length - 1;
+	return arr.slice(-1)[0];
 }
 
 //Next Problem
@@ -45,7 +45,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   //Code Here
 function reversedLooper(arr) {
 	for (var i = arr.length - 1; i >= 0; i--) {
-		alert(arr[i];
+		alert(arr[i]);
 	}
 }
 
@@ -65,22 +65,11 @@ function evenFinder(arr) {
 	return arr;
 }
 
-
-
-  
-
-
-
 // =============================================
 // =============================================
 // EXTRA PRACTICE PROBLEMS BELOW
 // =============================================
 // =============================================
-
-
-
-
-
 
 //Next problem
 
@@ -92,7 +81,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-
+function divider(arr) {
+  let both = [[],[]]
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+      both[0].push(arr[i])
+    } else {
+      both[1].push(arr[i])
+    }
+  }
+	return both;
+}
 
 //Next Problem
 
@@ -106,7 +105,14 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+function finder(arr) {
+  var rand = getRandomArbitrary();
+  if (arr.indexOf(rand) === -1) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 
 
@@ -131,6 +137,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+  function removeItem(myGroceryList, item) {
+    if (myGroceryList.includes(item)) {
+        myGroceryList.splice(item, 1);
+      } else {
+        return myGroceryList;
+      }
+    return myGroceryList;
+  }
+
+  function addItem(myGroceryList, item) {
+    if (!myGroceryList.includes(item)) {
+      myGroceryList.push(item);
+    }
+    return myGroceryList;
+  }
+
+
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
@@ -144,6 +167,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+function maker() {
+  var nums = [];
+  for (var i = 1; i < 216; i++) {
+      nums.push(i);
+  }
+  return nums;
+}
 
 
 //Next Problem
