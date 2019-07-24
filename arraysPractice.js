@@ -187,8 +187,8 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 function addTen(nums) {
   var ten = [];
-  for (var i = 1; i < nums.length + 1; i++) {
-    ten.push(i + 10);
+  for (var i = 0; i < nums.length; i++) {
+    ten.push(parseInt(nums[i]) + 10);
   }
   return ten;
 }
@@ -215,9 +215,11 @@ for(var i = 0; i < num2; i++){
 
 function longer(arr1, arr2) {
   if (arr1.length > arr2.length) {
-    return arr1;
+    console.log("arr1");
+  } else if (arr1.length === arr2.length) {
+    return "They are equal.";
   } else {
-    return arr2;
+    console.log("arr2");
   }
 }
 
